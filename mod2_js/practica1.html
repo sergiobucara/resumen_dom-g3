@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Coach SL">
+    <meta name="description" content="Diseño web con COEX">
+    <meta name="keywords" content="Aprende lógica, html, css, javascript, BD, vue.js, laravel"/>
+    <!-- importar cc bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- cambiar icono -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./js-ico.png"> 
+    <!-- importar css local -->
+    <link rel="stylesheet" href="./practica1.css">
+    <title>Primer HTML & JS</title>
+</head>
+<body>
+    
+    <header class="header">
+        <h1>Fundamentos de JavaScript</h1>
+    </header>
+    <main>
+        <div id="texto">
+            <p>primer parrafo contenido id texto</p>
+            <p>segundo parrafo contenido id texto</p>
+        </div>
+        <div class="ejemplos">
+            <h3>Ejemplo 1</h3>
+            <br>
+            <div id="div1">aqui va la lista</div>
+        </div>
+        <div class="ejemplos">
+            <h3>Ejemplo 2</h3>
+            <br>
+            <div class="contenido">
+                <div id="array1"></div>
+                <!-- <div id="array2"></div> -->
+            </div>
+            <br>
+        </div>
+    </main>
+    <hr>
+    <h3>Ejercicios Componentes</h3>
+    <div>
+        <h3>Ejercicio 1</h3>
+            <form class="formSuma form">
+                <label for="n1">Número 1</label>
+                <input type="number" name="" id="n1" required/>
+                <label for="n2">Número 2</label>
+                <input type="number" name="" id="n2" required/>
+                <button type="button" class="btn btn-info" onclick="calcular()">Calcular</button>
+                <label for="formRes">Resultado:</label>
+                <!-- <input type="text" id="formRes" placeholder="Resultado" disabled/>             -->
+            </form>
+    </div>
+    <div>
+        <h3>Ejercicio 2</h3>
+        <form class="formSuma form">      
+            <input type="text" id="rta" placeholder="Resultado" readonly/>
+            <label for="n1">Número 1</label>
+            <input type="number" name="" id="nUno" required/>
+            <label for="n2">Número 2</label>
+            <input type="number" name="" id="nDos" required/>
+            <div>
+                <button type="button" class="btn btn-info" id="bSuma">+</button>
+                <button type="button" class="btn btn-info" id="bResta">-</button>
+                <button type="button" class="btn btn-info" id="bMulti">x</button>
+                <button type="button" class="btn btn-info" id="bDiv">÷</button>                
+                <button type="reset" class="btn btn-success">Limpiar</button>
+            </div>
+            <button type="button" class="btn btn-info" onclick="calcularBotones()">Calcular</button>   
+            <!-- <button type="button" class="btn btn-info" onclick="calcularBotones();">Calcular</button>              -->
+        </form>
+    </div>
+    <hr>
+    <!-- ejemplo setTimeout -->
+    <h3>Ejercicio 3</h3>
+    <div class="regresiva">
+        <label for="numRegresiva">Número</label>
+        <input type="number" name="" id="numRegresiva"/>
+        <button type="button" class="btn btn-info" onclick="capturarDato();">Calcular</button>               
+        <input type="text" name="" id="resultado" placeholder="Resultado">        
+    </div>
+    <br><br>
+    <hr>
+    <div>
+        <section class="section-container">
+        <h3>FORM & EVENTS</h3>
+        <h4>Ejercicio 4</h4>
+        <!-- ejercicio 4 - eventos mouse onclick/ondblclick -->
+        <div class="dom-uno">
+            <p>Manejo de DOM evento:onclick</p>
+            <button id="btnEvento" class="btn btn-success">Oprime Aquí!</button>
+            <!-- <button id="btnEvento" class="btn btn-success" onclick="HaciendoClic();">Oprime Aquí!</button> -->
+            <p id="impresion"></p>             
+        </div>
+        <div class="ejemplos">
+            <p>Manejo de DOM evento:ondblclick</p>
+            <input type="button" class="btn btn-dark" ondblclick="incrementar();" value="incrementar">
+        </div>
+        
+        <!-- Ejercicio 5 - capturar datos de input components -->
+        <h4>Ejercicio 5</h4>
+        <form action="" class="form">            
+            <label for="nombre">Nombre</label>
+            <input type="text" name="" id="nombre" required/>
+            <label for="edad">Edad</label>
+            <input type="number" name="" id="edad" required/>
+            <input type="button" class="btn btn-dark" value="Mostrar" onclick="mostrar();">
+            <input type="text" name="" id="resNom" placeholder="Nombre" disabled>
+            <input type="text" name="" id="resEdad" placeholder="Edad" disabled>
+        </form>
+        </section>
+        
+        <div>
+            <!-- Ejercicio 6 - validar tamaño de caracteres -->
+            <h4>Ejercicio 6</h4>
+            <div class="ejemplos">                
+                <label for="pss">Contraseña:</label>
+                <input type="password" name="pss" id="clave"> 
+                <input id="btnPss" type="button" class="btn btn-dark" value="Confirmar">
+            </div>
+            <hr>
+            <h4>Ejercicio 7</h4>
+            <p>Control Select</p>
+            <form class="form">                
+                <p>
+                    <select name="" id="select1">
+                        <option value="ff0000">Red</option>
+                        <option value="00ff00">Green</option>
+                        <option value="0000ff">Blue</option>
+                        <option value="ffff00">Yellow</option>
+                    </select>
+                </p>
+                <label for="text1">Number index selected:</label>
+                <input type="text" name="" id="text1" placeholder="indice Seleccionado">
+                <label for="text2">text selected:</label>
+                <input type="text" name="" id="text2" placeholder="texto Seleccionado">
+                <label for="text3">Color Value selected:</label>
+                <input type="text" name="" id="text3" placeholder="valor Seleccionado">
+                <input type="color" name="" id="valueColor">
+                <br>
+
+                <h4>Ejercicio 8 - checkbox</h4>
+                <label for="chkEjemplo">input check Example:</label>
+                <input type="checkbox" name="chkEjemplo" id="chkEjemplo" onchange="alertaCheck(this);">
+                <p id="txtImpresion"></p>
+
+                <br>
+                <label for="">8.1 input check items:</label>
+                <label for="chk1">JavaScript <input type="checkbox" name="" id="chk1"></label>
+                <label for="chk2">HTML/CSS <input type="checkbox" name="" id="chk2"></label>
+                <label for="chk3">Python <input type="checkbox" name="" id="chk3"></label>
+                <label for="chk4">JAVA <input type="checkbox" name="" id="chk4"></label>
+                <label for="chk5">PHP <input type="checkbox" name="" id="chk5"></label>
+                <input id="btnChk" type="button" class="btn btn-dark" value="Validar">
+    <br>
+                <h4>Ejercicio 9 - textarea</h4>
+
+                <label for="description">Descripción</label>
+                <!-- control textarea -->
+                <textarea name="" id="description" cols="100" rows="5" required></textarea>
+                <!-- btn validar -->
+                <input id="btnTextArea" type="button" class="btn btn-dark btn-outline-danger" value="Validar">
+    <br>
+                <h4>Ejercicio 10</h4>
+                <p class="fs-3">Expresiones regulares</p>
+                <label for="txtCar">Ejemplo Expresión regular: Letra+Vocal</label>
+                <input type="text" name="" id="txtCar" placeholder="ingrese texto">
+                <p id="rtaRegular"></p>
+                <input id="btnRegular" type="button" class="btn btn-primary" value="Validar">
+    <br>
+                <label for="txtReg">Ejemplo Expresión regular: Letra+Vocal+número+longitud</label>
+                <input type="text" name="" id="txtReg" placeholder="ingrese texto">
+                <p id="rtaRegular2"></p>
+                <input id="btnRegular2" type="button" class="btn btn-primary" value="Validar">
+    <br>
+                <label for="txtNumber">Ejemplo Expresión regular: Números</label>
+                <input type="number" name="" id="txtNumber" placeholder="ingrese número">
+                <p id="rtaRegular3"></p>
+                <input id="btnRegular3" type="button" class="btn btn-primary" value="Validar">
+            </form>
+        </div>
+        <div>
+            <h4>Ejercicio 11</h4>
+            <h4>Eventos del teclado</h4>
+            <div class="ejemplos">
+                <label for="text">Ingrese un texto:</label>
+                <input type="text" name="" id="text">
+                <div id="rtaTeclado"></div>
+                <p>Ejemplo muestra una alerta en pantalla cada vez que ingreso un caracter en la caja de texto</p>
+            </div>
+            <div class="ejemplos">
+                <label for="text">11.3 Evento keyup Ingrese un texto (max 50 caracteres):</label>
+                <input type="text" id="tamText">
+                <!-- <input type="text" id="tamText" size="60" maxlength="50"> -->
+                <p>Cantidad de caracteres disponibles: <span id="cantidad" style="color:red;">50</span></p>
+            </div>
+        </div>
+        
+    </div>
+    <hr>
+    <section>
+        <div>
+            <ul id="myList">
+                <li>coffee</li>
+                <li>tea</li>
+            </ul>
+            <input id="btnadd" type="button" class="btn btn-primary" value="add">
+        </div>
+        <h4>Ejercicio 12 - Creación de nodos</h4>
+        <div class="ejemplos">
+            <div id="base">
+                <!-- <p id="primero">primer texto fijo</p> -->
+                <input id="btnCrear" type="button" class="btn btn-primary" value="Crear">
+
+                <input id="btnCopiar" type="button" class="btn btn-primary" value="Duplicar">
+
+                <input id="btnEliminar" type="button" class="btn btn-outline-danger" value="Eliminar">
+            </div>
+             <!-- contenedor destino de la manipulación de los nodos: -->
+            <div id="copia">
+                <p id="nuevoTexto"></p>
+            </div>
+        </div>
+
+        <br><br><br>
+    </section>
+    <section>
+        <h4>Ejercicio 13 - Manipulación de imágenes</h4>
+        <div class="ejemplos">
+            <div id="visor">
+            <h3 id="descripcion">Galería</h3>
+                <img src="./images/pc_laptop.jpg" id="pantalla"/>
+            </div>
+            <div id="miniaturas">
+                <!-- opción 1 -->
+                <img class="rounded" onclick="muestra('primera')" name="primera" src="./images/gal5.jpg" />
+                <img class="rounded" onclick="muestra('segunda')" name="segunda"src="./images/pc_keyboard.jpg"/>
+                <img class="rounded" name="tercera" onclick="muestra('tercera')" src="./images/pc_laptops.jpg"/>
+                <img class="rounded" onclick="muestra(4)" src="./images/webDesign.jpg"/>
+                <!-- opción 2 -->.
+                <!-- <img id="imgU" name="primera" src="./images/gal5.jpg" />
+                <img id="imgD" src="./images/pc_keyboard.jpg"/>
+                <img id="imgT" src="./images/pc_laptops.jpg"/>
+                <img id="imgC" src="./images/webDesign.jpg"/> -->
+            </div>
+        </div>
+    </section>
+    <section>
+        <h4>Ejercicio 14 - Crear una lista de elementos</h4>
+        <br>
+        <div class="container">
+            <div id="principal" class="card card-body col-sm-12">
+                <h4 class="title fs-2">Agregar Elementos:</h4>
+                <form class="form col-auto mb-3" id="frmLista">
+                        <input type="text" id="txtElemento" class="form-control" placeholder="Escribir elemento">
+                        <input type="submit" value="Agregar" class="btn btn-light btn-outline-primary">
+                </form>
+                <h4 class="title fs-2">Elementos:</h4>
+                <ul id="elementos" class="list-group">
+                    <li class="list-group-item">Elemento 1 
+                        <button class="btn btn-light btn-outline-danger btn-sm float-end delete">X</button></li>
+                    <li class="list-group-item">Elemento 2 
+                        <button class="btn btn-light btn-outline-danger btn-sm float-end delete">X</button></li>
+                    <li class="list-group-item">Elemento 3 
+                        <button class="btn btn-light btn-outline-danger btn-sm float-end delete">X</button></li>
+                    <li class="list-group-item">Elemento 4 
+                        <button class="btn btn-light btn-outline-danger btn-sm float-end delete">X</button></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+    <br>
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+<footer>
+    <section>
+        <div class="footer-two text-light">
+            <div class="container">
+                <div class="row lead fs-6 py-4 g-2">
+                    <div class="col-md-4 col-lg-4">
+                        <a class="fs-1 text-light navbar-brand" href="#">COEX</a>
+                    </div>
+                    <div class="col-md-2 col-lg-4">
+                        <h5>Educación</h5>
+                        <p>Sergio H. León © | Coex Coach</p>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <h5>Contacto</h5>
+                        <ul class="list-unstyled">
+                            <li>Dirección: Calle 35 #32-85 Mejoras públicas</li>
+                            <li>Teléfono: (+57) 311 883 9480</li>
+                            <li>Correo: gerencia@coex.com.co</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+    <script src="./practica1.js"></script>  
+</body>
+</html>
