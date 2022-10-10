@@ -9,8 +9,8 @@ Bienvenido al repositorio con el resumen de las sesiones acerca de la manipulaci
 El contenido de este taller  trata sobre los siguientes temas:
 
 * __Parte I__
-  * Funciones declaras y expresadas
-  * Eventos
+  * Funciones declaradas y expresadas js
+  * Eventos js
   * DOM
   * JavaScript
   * Manejo de clases Bootstrap
